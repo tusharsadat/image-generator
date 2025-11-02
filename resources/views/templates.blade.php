@@ -83,8 +83,8 @@
                             <!-- Template Info -->
                             <div class="small text-muted">
                                 <div class="text-truncate" x-text="template.svg_path" title="template.svg_path"></div>
-                                <div x-show="template.printing_dimensions" class="mt-1">
-                                    <span x-text="`${template.printing_dimensions.width} × ${template.printing_dimensions.height} ${template.printing_dimensions.unit || 'mm'}`"></span>
+                                <div x-show="template.printing_dimensions && template.printing_dimensions.width" class="mt-1">
+                                    <span x-text="template.printing_dimensions ? `${template.printing_dimensions.width} × ${template.printing_dimensions.height} ${template.printing_dimensions.unit || 'mm'}` : ''"></span>
                                 </div>
                             </div>
                         </div>
